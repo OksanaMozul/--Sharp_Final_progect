@@ -4,7 +4,23 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
+Console.Write("Введите целое число больше 1: ");
+int number = Convert.ToInt32(Console.ReadLine());
+int count = 1;
+NaturalCount(number, count);
 
+void NaturalCount(int n, int count)
+{
+    if (count > n)
+    {
+        return;
+    }
+    else
+    {
+        NaturalCount(n, count + 1);
+        Console.Write(count + " ");
+    }
+}
 
 // Задача 2: Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
 // M = 1; N = 15 -> 120
